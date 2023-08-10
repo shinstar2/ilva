@@ -1,0 +1,361 @@
+
+.container{
+    background-color: #f1f0eb;
+}
+.sc-visual{
+    display: flex;
+    align-items: center;
+   position: relative;
+    width: 100%;
+    height: 100vh;
+     /* background: #0f0; */
+     /* background-image: url(https://www.saraminimage.co.kr/dyms/dev/294/homepage/mNmMPvcPOLROobfHYW5Y1AP3ZrKD9uqkOlZU9uN9.jpeg); */
+}
+.sc-visual .title{
+    display: flex;
+    flex-direction: column;
+    font-size: 8.8542vw;
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+    padding: 0 90px;
+}
+.sc-visual .title .parent{overflow: hidden;}
+.sc-visual .title .parent span{
+    font-family:'ppn';
+    display: block;
+}
+
+.sc-visual .spot_item{}
+
+/* .sc-visual .img-area video{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    
+} */
+ .sc-visual .img-area img{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+
+.sc-intro{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+
+    grid-column-gap: 12.5em;
+    background-color: #f1f0eb;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 200px 200px 170px 170px;
+}
+.sc-intro .img-box{}
+.sc-intro img{
+    width: 200px;height: 280px;
+    object-fit: cover
+    
+}
+.sc-intro .group-text{
+    flex: 1;
+    max-width: 55%; 
+    /* 최대 커져도55%까지만 */
+}
+
+.sc-intro .group-text span{ 
+    width: 100%;
+    font-weight: 300;
+    padding-left: 40px;
+    
+}
+    .sc-intro .group-text span:first-child{
+        display: block;
+        padding-left: 40px;
+        padding-bottom: 20px;
+    } 
+.sc-intro .group-text em{
+    display: inline-block;
+    font-weight: 400;
+    font-size: 26px;
+}
+.sc-intro .group-text strong{}
+
+.sc-intro .group-text .desc{
+    font-size: 16px;
+    color: #1c1d1d;
+    opacity: 0.6;
+    margin-top: 25px;
+    display: block;
+    opacity: 0.6;
+    max-width: 90%;
+    line-height: 26px;
+}
+
+.sc-prd{position: relative;}
+.sc-prd h2{
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    margin-bottom: 20px;
+}
+.sc-prd .right{
+    position: absolute;
+    top: 0px;right: 30px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* .prd-img 마우스 기준을 가운데로 맞추려면 마진으로 */
+.sc-prd .prd-img{
+    visibility: hidden;
+    opacity: 0;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 400px;height: 400px;
+    /* transform: translate(-50%, -50%); */
+    margin-left: -200px;
+    margin-top: -200px;
+
+    pointer-events: none; 
+    /* 호버가 될때 따라다니며 이미지가 방해해서 깜빡거림->막아주기 위해 none처리  */
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 2;
+}
+.sc-prd .circle{
+    visibility: hidden;
+    opacity: 0;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #403a3a;
+    width: 20px;height: 20px;
+    border-radius: 50%;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 2;
+}
+
+.sc-prd .prd-img.on,
+.sc-prd .circle.on{
+visibility: visible;
+opacity: 1;
+}
+.sc-prd .circle span{
+    padding-left: 30px;
+}
+.sc-prd img{width: 100%;height: 100%;object-fit: cover;}
+.sc-prd .img{
+    transition: 0.3s;
+    clip-path: inset(0px round 0px 0px 0px 0px)
+}
+.sc-prd .img:hover{
+     
+    text-align: center;
+    border-radius: 20px;
+    transition: 0.3s;
+    clip-path: inset(10px round 10px 10px 10px 10px)
+}
+
+
+.sc-about{}
+.sc-about .group-flex{
+    gap: 662px;
+    background-color: #f1f0eb;
+    padding: 145px 46px 0 36px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.sc-about .group-flex p{
+    flex: 1;
+}
+
+.sc-card{
+    padding-top: 18em;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.sc-card .card-area{
+    position: relative;
+    overflow: hidden;
+    padding: 40px 0;
+}
+.sc-card .card-area:hover{}
+.sc-card strong{
+    /* position: absolute; */
+    
+    display: block;
+    color: #1c1d1d;
+    
+    /* margin-top: 0;
+    margin-bottom: 0; */
+    padding-bottom: 40px;
+    font-family: Playfairdisplay, sans-serif;
+    font-size: 20vw;
+    font-weight: 400;
+    line-height: .75;
+}
+.sc-card .card-area i{
+    font-size: 100px;
+}
+.sc-card .card-area .img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    /* object-fit: cover;  */
+    /* bottom: 0; */
+    /* transform: scaleY(0); */
+    /* transform-origin: top; */
+    /* transition: transform 0.5s; */
+    /* transform: translateY(100%); */
+    
+}
+.sc-card .card-area img{
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+.sc-card .card-area:hover .img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sc-card .text-box{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5.9375em;
+    padding-left: 2.875em;
+    padding-right: 2.875em;
+}
+.sc-card .text-box .desc{
+    max-width: 46vw;
+    color: #1c1d1d;
+    opacity: 0.7;
+}
+.sc-card .text-box .link-more{
+    position: relative;
+    font-size: 22px;
+    flex: none;
+    padding: 0 20px;
+}
+.sc-card .text-box .link-more::before{
+    display: block;
+    content: '';
+    width: 44px;
+    height: 44px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    transition: 0.3s;
+}
+
+.sc-card .text-box .link-more .wrap{
+    position: relative;
+    overflow: hidden;
+}
+.sc-card .text-box .link-more .wrap span{
+    transition: 0.3s;
+}
+.sc-card .text-box .link-more .first{
+    display: flex;
+}
+.sc-card .text-box .link-more .last{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+}
+.sc-card .text-box .link-more:hover .first{
+    transform: translateY(-100%);
+}
+.sc-card .text-box .link-more:hover .last{
+    transform: translateY(0%);
+}
+.sc-card .text-box .link-more:hover::before{
+    width: 100%;
+    border: 1px solid #000;
+}
+
+.sc-scroll{
+    padding: 312px 177px 156px 0;
+}
+.sc-scroll .img-box{
+    width: 269px;
+    margin-left: auto;
+    position: relative;
+    
+}
+.sc-scroll .img-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sc-video{position: relative;}
+.sc-video h2{
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+.sc-video .time{
+    position: absolute;
+    top: 0;right: 0;
+    margin-right: 30px;
+}
+
+
+.sc-video img{width: 100%;height: 785px;object-fit: cover;}
+.sc-video .img{
+    transition: 0.3s;
+    clip-path: inset(0px round 0px 0px 0px 0px)
+}
+.sc-video .img:hover{
+     
+    text-align: center;
+    border-radius: 20px;
+    transition: 0.3s;
+    clip-path: inset(10px round 10px 10px 10px 10px)
+}
+
+.sc-video .circle{
+    visibility: hidden;
+    opacity: 0;
+    margin-left: -20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    color: #fff;
+    width: 20px;height: 20px;
+    border-radius: 50%;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 2;
+    pointer-events: none; 
+}
+
+.sc-video .circle.on{
+    visibility: visible;
+    opacity: 1;
+}
+.sc-video .circle .watch{
+    display: block;
+   width: 500px;
+    margin-left: 30px;
+}
+
