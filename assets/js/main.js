@@ -40,7 +40,7 @@ gsap.from('.sc-visual .title .parent span',1,{ /**1초동안 0.1초 간격으로
 
 gsap.to('.sc-visual',{
     scrollTrigger:{
-        trigger:".sc-visual", //기준점:".sc-visual"
+        trigger:".sc-visual", //기준점:".sc-visual임"
         start:"0% 0%", //앞자리 % :트리거기준 시작지점 , 
                        //뒷자리 % : 윈도우기준시작지점 -> 두 지점이 만나면 실행
         end:"100% 0%",//앞자리100%: 끝지점.
@@ -63,7 +63,7 @@ gsap.to('.sc-visual',{
         trigger:".sc-intro", //기준점:".sc-intro"
         start:"0% 50%", //앞자리 % :트리거기준 시작지점 , 뒷자리 % : 윈도우기준시작지점 -> 두 지점이 만나면 실행
         end:"100% 70%",//앞자리100%: 끝지점.
-        markers:true,//표시자
+        // markers:true,//표시자
         scrub:1,//영역 전체가 내려갈떄 딜레이 되는 수치 
     },
     yPercent:-30,
